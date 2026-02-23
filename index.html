@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Prank Website</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #box {
+            background-color: #222;
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffea;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00ffea;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #00c9bb;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #custom {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #00ffea;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <h2>Enter Your Name 👇</h2>
+        <input type="text" id="username" placeholder="Your name...">
+        <br>
+        <button onclick="prank()">Enter</button>
+
+        <p id="result"></p>
+        <p id="custom"></p>
+    </div>
+
+    <script>
+        function prank() {
+            let name = document.getElementById("username").value;
+
+            if (name.trim() === "") {
+                alert("Please enter a name!");
+                return;
+            }
+
+            // First line (shows the user's name)
+            document.getElementById("result").innerHTML =
+                name + ", Aap to chud gaye guru! 😂🔥";
+
+            // SECOND LINE — CUSTOMIZE THIS ANYTIME
+            let customMessage =name + "Aab shayri suno Are uchi building ke piche hamara the zhopda tum bosadike ho tumhari ma ka bhosada! 😂";
+
+            document.getElementById("custom").innerHTML = customMessage;
+        }
+    </script>
+
+</body>
+</html>
